@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/axlsx_styler.svg)](https://rubygems.org/gems/axlsx_styler)
 [![Build Status](https://travis-ci.org/sakovias/axlsx_styler.svg?branch=master)](https://travis-ci.org/sakovias/axlsx_styler)
 
 # axlsx_styler
@@ -88,7 +89,8 @@ Producing the same spreadsheet with vanilla `axlsx` turns out [a bit trickier](.
 
 Version | Change
 --------|-------
+0.2.0 | Add support for `axlsx` major version `3.0.0`. Update test suite to run against v2 and v3 of `axlsx`
 0.1.7 | Allow mixing vanilla `axlsx` styles and those from `add_style` and `add_border` (see [this example](./examples/mixing_styles.rb))
 0.1.5 | Hide `Workbook#apply_styles` method to make it easier to use.
-0.1.3 | Make border styles customazible.
+0.1.3 | Make border styles customizable.
 0.1.2 | Allow applying multiple style hashes.

@@ -44,6 +44,9 @@ module Axlsx
     # styles are added to the axlsx_styler style_index cache
     original_add_style = instance_method(:add_style)
     define_method :add_style do |style|
+      # Line below added by Capdesk as it seems to fix issues regarding conditional formatting.
+      return original_add_style.bind(self).(style) if style[:type] == :dxf
+
       self.style_index ||= {}
 
       raw_style = {type: :xf, name: 'Arial', sz: 11, family: 1}.merge(style)
